@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
+/*
 [InitializeOnLoad]
 public class FolderCustomiser
 {
@@ -45,3 +46,4 @@ public class FolderCustomiser
         }
     }
 }
+*/
