@@ -13,6 +13,7 @@ public class FolderColourManager
         EditorApplication.projectWindowItemOnGUI += OnProjectWindowItemGUI;
     }
     
+    #region Colour List
     // Adding the context menu (the 2000 is the 'priority' so I can choose where it appears in the context menu)
     [MenuItem("Assets/Folder Colour/None", false, 2000)]
     private static void SetColourNone() => SaveColour("");
@@ -37,6 +38,7 @@ public class FolderColourManager
     
     [MenuItem("Assets/Folder Colour/Pink", false, 2007)]
     private static void SetColorPink() => SaveColour("#FF69B4");
+    #endregion
     
     // Showing the menu only for folders, no other assets
     [MenuItem("Assets/Folder Colour/", true)]
@@ -72,9 +74,15 @@ public class FolderColourManager
             bool isSmall = selectionRect.height < 20;
             
             // Seeing if they're little folders or big folders
-            Rect iconRect = isSmall
-                ? new Rect(selectionRect.x, selectionRect.y, 16, 16)
-                : new Rect(selectionRect.x + 3, selectionRect.y, selectionRect.width - 6, selectionRect.width - 6);
+            Rect iconRect;
+            if (isSmall)
+            {
+                iconRect = new Rect(selectionRect.x, selectionRect.y, 16, 16);
+            }
+            else
+            {
+                iconRect = new Rect(selectionRect.x + 3, selectionRect.y, selectionRect.width - 6, selectionRect.width - 6);
+            }
             
             EditorGUI.DrawRect(iconRect, colour);
         }
