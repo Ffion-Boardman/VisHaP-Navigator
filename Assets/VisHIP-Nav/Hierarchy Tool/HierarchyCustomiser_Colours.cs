@@ -17,13 +17,14 @@ public class HierarchyCustomiser : MonoBehaviour
         GameObject obj = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
         if (obj == null) return;
         
-        // Header logic (if the nape starts with '---' or is in ALL CAPS)
+        // Header logic (if the nape starts with '---')
         if (obj.name.StartsWith("---"))
         {
             // Draw a background colour that fills in the width of the header
             Rect headerRect = new Rect(selectionRect.x, selectionRect.y, selectionRect.width + 100, selectionRect.height);
+            Rect boxRect = new Rect(selectionRect.x + 17, selectionRect.y, selectionRect.width, selectionRect.height);
             Rect fullRect = new Rect(32, selectionRect.y, selectionRect.width + (selectionRect.x - 32), selectionRect.height);
-            EditorGUI.DrawRect(fullRect, new Color(0.2f, 0.2f, 0.2f, 0.7f));
+            EditorGUI.DrawRect(boxRect, new Color(0.2f, 0.2f, 0.2f, 1f));
             
             // Draw the text in the center
             GUIStyle headerStyle = new GUIStyle(EditorStyles.boldLabel)
