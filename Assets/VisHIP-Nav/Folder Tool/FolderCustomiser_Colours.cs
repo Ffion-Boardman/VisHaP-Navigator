@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using UnityEditor.VersionControl;
 
 [InitializeOnLoad]
-public class FolderColourManager
+public class FolderCustomiser_Colours
 {
     private const string PREFS_PREFIX = "FolderColour_";
 
-    static FolderColourManager()
+    static FolderCustomiser_Colours()
     {
         EditorApplication.projectWindowItemOnGUI += OnProjectWindowItemGUI;
     }
     
-    #region Colour List
+    #region Default Colour List
     // Adding the context menu (the 2000 is the 'priority' so I can choose where it appears in the context menu)
     [MenuItem("Assets/Folder Colour/None", false, 2000)]
     private static void SetColourNone() => SaveColour("");
