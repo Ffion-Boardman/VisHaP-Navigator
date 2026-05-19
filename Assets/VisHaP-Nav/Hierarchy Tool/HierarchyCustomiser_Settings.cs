@@ -6,13 +6,15 @@ using UnityEditorInternal;
 [DisallowMultipleComponent] // I don't want this being added twice to one object
 public class HierarchyCustomiser_Settings : MonoBehaviour
 {
-     public Color backgroundColor = new Color(0.0f, 0.0f, 0.0f, 0f);
-     public Color textColor = Color.white;
-     
+     [ColorUsage(false)] // Means users cannot access the alpha channel
+     public Color backgroundColor = new Color(0.2196079f, 0.2196079f, 0.2196079f, 1f); // Use the default Unity background panel colour
+     [ColorUsage(false)]
+     public Color textColor = new Color(0.7921569f, 0.7921569f, 0.7921569f, 1f); // Use the default Unity text colour
+
      public bool isBold = false;
      public bool isItalic = false;
      
-     public TextAnchor alignmment = TextAnchor.MiddleLeft;
+     public TextAnchor alignment = TextAnchor.MiddleLeft;
      
      public bool uppercase = false;
      

@@ -221,8 +221,8 @@ public class FolderCustomiser_Colours
             CustomFolderColorWindow window = GetWindow<CustomFolderColorWindow>("Custom Folder Colour");
             
             // Setting rigid dimensions for the layout of the window
-            window.minSize = new Vector2(250, 360);
-            window.maxSize = new Vector2(250, 360);
+            window.minSize = new Vector2(250, 400);
+            window.maxSize = new Vector2(250, 400);
             
             // Opens as a 'floating' utility window, so it doesn't get docked into the layout tabs like the Inspector
             window.ShowUtility();
@@ -267,8 +267,8 @@ public class FolderCustomiser_Colours
             // - - - RECENT COLOURS - - -
             
             EditorGUILayout.LabelField("Recent Colours", EditorStyles.boldLabel);
-            GUILayout.BeginHorizontal();
-            GUILayout.Space(10);
+            
+            GUILayout.BeginVertical();
             
             // Make sure there ARE recent colours
             if (recentColours.Count == 0)
