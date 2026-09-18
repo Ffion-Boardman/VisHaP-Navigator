@@ -7,19 +7,19 @@
 ![Static Badge](https://img.shields.io/badge/UI-lightgrey?style=flat-square)
 
 Made for my 'Tools Development' module during my second year at The University of Staffordshire.  
-Check out the [project-overview](https://www.ffionboardman.com/game-projects/pennies-for-the-path) of VisHaP Navigator on my portfolio!
+Check out the [project-overview](https://www.ffionboardman.com/game-projects) of VisHaP Navigator on my portfolio!
 
 ## Programming Highlights
 
 ### Folder Colouring System
 The Player Controller was intentionally designed to avoid using the Update() loop as much as possible, to practice optimization methods in my code.  
-Colours: [FolderCustomiser_Colours.cs](Assets/VisHaP-Nav/Folder_Tool/FolderCustomiser_Colours.cs)
+> Colours: [FolderCustomiser_Colours.cs](Assets/VisHaP-Nav/Folder_Tool/FolderCustomiser_Colours.cs)
 
 ### Hierarchy Colouring System
 This was my first time using Unity's UI Toolkit instead of the original UI system, with intentions of ensuring the UI is clean and dynamically created when the game is started.  
-Colours: [HierarchyCustomiser_Colours.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Colours.cs)  
-Editor: [HierarchyCustomiser_Editor.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Editor.cs)  
-Settings: [HierarchyCustomiser_Settings.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Settings.cs)  
+> Colours: [HierarchyCustomiser_Colours.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Colours.cs)  
+> Editor: [HierarchyCustomiser_Editor.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Editor.cs)  
+> Settings: [HierarchyCustomiser_Settings.cs](Assets/VisHaP-Nav/Hierarchy_Tool/HierarchyCustomiser_Settings.cs)  
 
 ## Instillation
 Simply drag and drop the zip file "VisHaP-Nav.zip" into your project, and extract its contents: it does not matter where in your project you do this.
@@ -31,4 +31,7 @@ The folder tool allows you to use either a default colour from the designated li
 ## How-To: Hierarchy Stylizing
 Right-click the game object within the scene view that you wish to customize, and select 'Add Hierarchy Style', it should be located just beneath the Prefab option.
 From there, a customization component is automatically added to your game object, and pushed to the top of the components list (right beneath the transform component). You can customize the colour of the background, text, and formatting of that text as you wish.
+
+> [!CAUTION]
+> The default appearance for the hierarchy-stylizer and folder-colouring-system is in line with the default appearance for **Unity Version 6000.17.1f**; if you are using any alternative layouts that change the colours, icons, or layout for the interface, this plugin may not function as intended.
 
